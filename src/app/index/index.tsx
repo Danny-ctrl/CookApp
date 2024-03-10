@@ -30,8 +30,7 @@ setSelected((state)=>[...state,value])
           showsVerticalScrollIndicator={false}
           >
   {Array.from({length:100}).map((item,index)=>(
-
-<Ingredient key={index} name = "Tomate" image=" " selected
+     <Ingredient key={index} name = "Tomate" image=" " selected={selected.includes(String(index))}
 onPress={()=>handleToggleSelected(String(index))}/>
 ))}
         </ScrollView>
